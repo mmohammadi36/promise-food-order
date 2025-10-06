@@ -5,11 +5,6 @@ const output = document.getElementById("output");
 function print(msg) {
   output.textContent += msg + "\n";
 }
-
-// TODO: اینجا سه تابع Promise بساز
-// 1. orderFood
-// 2. cookFood
-// 3. serveFood
 function orderFood() {
   return new Promise((res) => {
     setTimeout(() => {
@@ -32,14 +27,6 @@ function servedFood() {
   });
 }
 startBtn.addEventListener("click", () => {
-  // TODO: اینجا زنجیره Promiseها رو بنویس
-  // مثال:
-  // orderFood()
-  //   .then(...)
-  //   .then(...)
-  //   .then(() => print("🎉 Meal is ready!"))
-  //   .catch(...)
-
 orderFood()
 .then(ordered=>{print(ordered);return cookFood()
 })
